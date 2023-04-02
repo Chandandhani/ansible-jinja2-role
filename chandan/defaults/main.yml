@@ -1,0 +1,13 @@
+---
+# defaults file for chandan
+base_folder: "/opt/apache-tomcat1"
+customer_project_contextpath: "/connect-server-phygital5x"
+tomcat_status_enabled: true
+hostname: "phygital5xdev.inventia.biz"
+core_api_url: "url.base.phygital.api"
+code_cdn_url: "url.base.phygital.app"
+customer_api_url: "url.base.customer.app"
+customer_api_url_api: "url.base.customer.api"
+java_lang_string: "java.lang.string"
+url_base_phygital_app_v5: "url.base.phygital.app.v5"
+url_phygital_api_private: "url.phygital.api.private"

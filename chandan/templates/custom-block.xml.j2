@@ -1,0 +1,20 @@
+{% if tomcat_status_enabled %}
+<!-- BEGIN CUSTOMER BLOCK -->
+
+<Context path="{{ customer_project_contextpath }}" docbase="{{ base_folder }}/inventia/connect-server-multitenant-5.1.0-build320-RC-SNAPSHOT.war" debug="0" reloadable="False" />
+    <!-- CORE API URL -->
+	<Environment name="{{ core_api_url }}" override="true" type="{{ java_lang_string }}" value="https://{{ hostname }}/connect-server"/>
+    <!-- CORE CDN URL -->
+	<Environment name="{{ code_cdn_url }}" override="true" type="{{ java_lang_string }}" value="https://{{ hostname }}/connect-server" />
+    <!-- CUSTOM API URL -->
+	<Environment name="{{ customer_api_url }}" override="true" type="{{ java_lang_string }}" value="https://{{ hostname }}/connect-server-phygital5x/app" />
+    <!--CUSTOM API URL -->
+        <Environment name="{{ customer_api_url_api }}" override="true" type="java.lang.string" value="https://phygital5xdev.inventia.biz/connect-server-phygital5x/api" />
+	<Environment name="{{ url_base_phygital_app_v5 }}" override="true" type="java.lang.string" value="https://cdn.inventia.biz" />
+	<Environment name="{{ url_phygital_api_private }}" override="true" type="java.lang.string" value="https://phygital5xdev.inventia.biz/connect-server" />
+	<Environment name="url.base.phygital.messaging" override="true" type="java.lang.string" value="https://phygital5xdev.inventia.biz/connect-server/messaging" />
+	
+	
+</Context>
+<!-- END CUSTOMER BLOCK -->
+{% endif %}

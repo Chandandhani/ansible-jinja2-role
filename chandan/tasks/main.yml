@@ -1,0 +1,6 @@
+---
+# tasks file for chandan
+- name: Replacing configuration file
+  template:
+    src: ./custom-block.xml.j2
+    dest: /opt/apache-tomcat-9.0.73/conf/vhosts/bazzmm.xml
